@@ -28,7 +28,7 @@ console.log(searchEngine.search('Movies', (e) => e.rating > 8.5, {key: 'rating',
 ]
 */
 
-
+/* self-attempt */
 class InMemorySearch  {
      nsList = {}
      addDocuments = (nsName, ...nsEntries) => {
@@ -63,4 +63,32 @@ searchInstance.addDocuments('Movies',
                     {name: 'Jhon Wick 4', rating: 8.2, year: 2023}, 
                     {name: 'Black Panther', rating: 9.0, year: 2022}
                    );
+/* self-attempt-end */
+
+/* solution */
+
+class inMemSE {
+  constructor() {
+    this.entries = new Map();
+  }
+
+  registerEntry = (entry) => {
+    if(!this.entries.get(entry))
+    this.entries.set(entry, []);
+  }
+
+  addDocs = (ns, ...entry) => {
+    if(!this.entries.get(ns)){
+      this.entries.set(ns, [...entry]);
+    } else {
+      const currEntry = this.entries.get(ns);
+      this.entries.set(ns, [...currEntry, ...entry]);
+    }
+
+  }
+
+  search = (ns, cbFn, oby) => {
+    
+  }
+}
                    
