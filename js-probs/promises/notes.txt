@@ -1,1 +1,2 @@
 1. promise.then vs Promise.resolve(promise).then
+2. An object is iterable if it has a property whose key is Symbol.iterator, and the value of that property is a function.
