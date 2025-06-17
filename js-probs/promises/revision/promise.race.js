@@ -1,0 +1,1 @@
+/* resolves with the first promise which resolves in the list */
