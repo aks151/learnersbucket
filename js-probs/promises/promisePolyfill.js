@@ -14,7 +14,7 @@ new Promise((resolve, reject) => {
 class PromisePolyfill{
 
     constructor() {
-
+        
     }
 
     resolvePf = () => {
