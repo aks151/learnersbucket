@@ -51,27 +51,5 @@ console.log("***************************************")
 console.log("initial list of objects: ", objList);
 
 const breakCycle = () => {
-
-    // i need something like a map/hashtable to get this job done
-    //had it been cpp, the job would have been done, but since it is js, i can just think of brute force ways of getting this done, like like like, ummm
-    // obj of objects, 
-    /* 
-    {
-    obj1: true,
-    obj2: true,
-    obj3: true
-    }
-     */
-    const objMap = {};
-    objList.forEach((obj) => {
-        if(objMap[obj.next] === true){
-            obj.next = null;
-        }
-
-        objMap[obj] = true;
-
-    })
-    console.log("objList after iteration: ", objList )
+    
 }
-breakCycle()
-
